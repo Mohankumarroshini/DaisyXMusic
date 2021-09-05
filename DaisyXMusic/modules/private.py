@@ -35,38 +35,38 @@ def _start(client, message):
         text=tr.START_MSG.format(message.from_user.first_name, message.from_user.id),
         parse_mode="markdown",
         reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "➕ Add me to your Group 🙋‍♀️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-                [
-                    InlineKeyboardButton(
-                        "📲 Updates", url=f"https://t.me/{UPDATES_CHANNEL}"), 
-                    InlineKeyboardButton(
-                        "💬 Support", url=f"https://t.me/{SUPPORT_GROUP}")
-                ],[
-                    InlineKeyboardButton(
-                        "🛠 Source Code 🛠", url=f"https://{SOURCE_CODE}")
-                ]
-            ]
-        ),
-        reply_to_message_id=message.message_id
-        )
 
-@Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
-async def gstart(_, message: Message):
-    await message.reply_text(
-        f"""**🔴 {PROJECT_NAME} is online**""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "💬 Support Chat", url=f"https://t.me/{SUPPORT_GROUP}"
-                    )
-                ]
-            ]
-        ),
-    )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
 
 
 @Client.on_message(filters.private & filters.incoming & filters.command(['help']))
